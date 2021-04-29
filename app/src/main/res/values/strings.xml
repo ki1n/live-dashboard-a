@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">My First App</string>
+
+    <string name="close">Close</string>
+    <string name="live_dashboard">Live Dashboard</string>
+    <string name="tachometer">TACHOMETER</string>
+    <string name="int_man_p">INT-MAN.P.</string>
+    <string name="performance">PERFORMANCE</string>
+    <string name="air_flow_rate">AIR FLOW RATE</string>
+    <string name="psi">psi</string>
 </resources>

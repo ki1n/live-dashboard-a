@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_16"
+    android:background="@drawable/background_standard_black">
+
+    <TextView
+        android:id="@+id/tv_heading_int_man_p"
+        style="@style/defaultTextStyle"
+        android:text="@string/performance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_int_man_p"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_4"
+        android:background="@color/fill_line_red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_heading_int_man_p" />
+
+    <TextView
+        android:id="@+id/tv_int_man_p"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginVertical="@dimen/dp_16"
+        android:fontFamily="@font/rubik_bold"
+        android:text="5"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_32"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_int_man_p" />
+
+    <TextView
+        android:id="@+id/tv_psi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/psi"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_int_man_p"
+        app:layout_constraintStart_toEndOf="@+id/tv_int_man_p" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
