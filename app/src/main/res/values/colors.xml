@@ -12,4 +12,7 @@
     <color name="blackOverlay80">#CC000000</color>
     <color name="grayBlack">#141414</color>
     <color name="white">#FFFFFF</color>
+    <color name="gray_balls">#d8d8d8</color>
+    <color name="darkGrey">#333333</color>
+    <color name="black_tachometer">#3e3e3e</color>
 </resources>

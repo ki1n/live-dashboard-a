@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@drawable/background_standard_black">
 
     <TextView
@@ -14,6 +15,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
+        android:id="@+id/view_"
         android:layout_width="0dp"
         android:layout_height="@dimen/dp_4"
         android:layout_marginBottom="150dp"
@@ -21,6 +23,78 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_heading_tachometer" />
+        app:layout_constraintTop_toBottomOf="@id/tv_heading_tachometer"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/timeline"
+        android:layout_width="0dp"
+        android:layout_height="6dp"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/dp_64"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_" />
+
+    <TextView
+        android:id="@+id/tv_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="64dp"
+        android:textColor="@color/black_tachometer"
+        android:textSize="@dimen/sp_18"
+        android:text="@string/speed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeline" />
+
+    <TextView
+        android:id="@+id/tv_speed_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_48"
+        android:fontFamily="@font/rubik_bold"
+        android:text="178"
+        app:layout_constraintStart_toStartOf="@+id/tv_speed"
+        app:layout_constraintTop_toBottomOf="@+id/tv_speed" />
+
+    <TextView
+        android:id="@+id/tv_km"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/km_h"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_28"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_speed_count"
+        app:layout_constraintStart_toEndOf="@+id/tv_speed_count" />
+
+    <TextView
+        android:id="@+id/tv_gear_"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:textSize="@dimen/sp_28"
+        android:textColor="@color/darkGrey"
+        android:background="@drawable/background_gear"
+        android:text="4"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_speed_count"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_gear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/gear"
+        android:textColor="@color/black_tachometer"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_speed"
+        app:layout_constraintEnd_toEndOf="@+id/tv_gear_"
+        app:layout_constraintStart_toStartOf="@+id/tv_gear_"
+        app:layout_constraintTop_toTopOf="@+id/tv_speed" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,4 +15,7 @@
     <string name="count_data">%1$s</string>
     <string name="throtle">Throtle</string>
     <string name="eng_load">Eng.Load</string>
+    <string name="speed">SPEED</string>
+    <string name="km_h">km/h</string>
+    <string name="gear">GEAR</string>
 </resources>
