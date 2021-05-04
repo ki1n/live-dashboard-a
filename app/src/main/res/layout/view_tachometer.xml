@@ -3,13 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/dp_16"
     android:background="@drawable/background_standard_black">
 
     <TextView
-        android:id="@+id/tv_performance"
+        android:id="@+id/tv_heading_tachometer"
         style="@style/defaultTextStyle"
-        android:text="@string/performance"
+        android:text="@string/tachometer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -17,12 +16,11 @@
     <View
         android:layout_width="0dp"
         android:layout_height="@dimen/dp_4"
-        android:layout_marginBottom="100dp"
-        android:background="@color/fill_line_red"
+        android:layout_marginBottom="150dp"
+        android:background="@drawable/background_view"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_performance"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@id/tv_heading_tachometer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

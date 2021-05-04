@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_standard_black">
+
+    <TextView
+        android:id="@+id/tv_performance"
+        style="@style/defaultTextStyle"
+        android:text="@string/performance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_4"
+        android:background="@drawable/background_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_performance" />
+
+    <TextView
+        android:id="@+id/tv_throtle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_16"
+        android:fontFamily="@font/rubik_bold"
+        android:gravity="end"
+        android:padding="@dimen/dp_4"
+        android:text="@string/throtle"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_throtle"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:progress="62"
+        android:progressDrawable="@drawable/performance_progress"
+        app:layout_constraintBottom_toBottomOf="@id/tv_throtle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/tv_throtle" />
+
+    <TextView
+        android:id="@+id/tv_eng_load"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:fontFamily="@font/rubik_bold"
+        android:gravity="end"
+        android:padding="@dimen/dp_4"
+        android:text="@string/eng_load"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_throtle" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_eng_load"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:progress="93"
+        android:progressDrawable="@drawable/performance_progress"
+        app:layout_constraintBottom_toBottomOf="@id/tv_eng_load"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/tv_eng_load" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <View
+        android:id="@+id/view_dividing_line_1"
+        android:layout_width="@dimen/dividing_const"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/progressBar_eng_load"
+        app:layout_constraintEnd_toStartOf="@id/view_dividing_line_4"
+        app:layout_constraintStart_toEndOf="@id/tv_throtle"
+        app:layout_constraintStart_toStartOf="@id/progressBar_throtle"
+        app:layout_constraintTop_toTopOf="@id/progressBar_throtle" />
+
+    <View
+        android:id="@+id/view_dividing_line_4"
+        android:layout_width="@dimen/dividing_const"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/progressBar_eng_load"
+        app:layout_constraintEnd_toStartOf="@id/view_dividing_line_2"
+        app:layout_constraintStart_toEndOf="@id/view_dividing_line_1"
+        app:layout_constraintTop_toTopOf="@id/progressBar_throtle" />
+
+    <View
+        android:id="@+id/view_dividing_line_5"
+        android:layout_width="@dimen/dividing_const"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/progressBar_eng_load"
+        app:layout_constraintEnd_toStartOf="@id/view_dividing_line_6"
+        app:layout_constraintStart_toEndOf="@id/view_dividing_line_3"
+        app:layout_constraintTop_toTopOf="@id/progressBar_throtle" />
+
+    <View
+        android:id="@+id/view_dividing_line_2"
+        android:layout_width="@dimen/dividing_const"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/progressBar_eng_load"
+        app:layout_constraintEnd_toStartOf="@id/view_dividing_line_3"
+        app:layout_constraintStart_toEndOf="@id/view_dividing_line_4"
+        app:layout_constraintTop_toTopOf="@id/progressBar_throtle" />
+
+    <View
+        android:id="@+id/view_dividing_line_8"
+        android:layout_width="@dimen/dividing_const"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/progressBar_eng_load"
+        app:layout_constraintEnd_toStartOf="@id/view_dividing_line_9"
+        app:layout_constraintStart_toEndOf="@id/view_dividing_line_7"
+        app:layout_constraintTop_toTopOf="@id/progressBar_throtle" />
+
+    <View
+        android:id="@+id/view_dividing_line_3"
+        android:layout_width="@dimen/dividing_const"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/progressBar_eng_load"
+        app:layout_constraintEnd_toStartOf="@id/view_dividing_line_5"
+        app:layout_constraintStart_toEndOf="@id/view_dividing_line_2"
+        app:layout_constraintTop_toTopOf="@id/progressBar_throtle" />
+
+    <View
+        android:id="@+id/view_dividing_line_6"
+        android:layout_width="@dimen/dividing_const"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/progressBar_eng_load"
+        app:layout_constraintEnd_toStartOf="@id/view_dividing_line_7"
+        app:layout_constraintStart_toEndOf="@id/view_dividing_line_5"
+        app:layout_constraintTop_toTopOf="@id/progressBar_throtle" />
+
+    <View
+        android:id="@+id/view_dividing_line_7"
+        android:layout_width="@dimen/dividing_const"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/progressBar_eng_load"
+        app:layout_constraintEnd_toStartOf="@id/view_dividing_line_8"
+        app:layout_constraintStart_toEndOf="@id/view_dividing_line_6"
+        app:layout_constraintTop_toTopOf="@id/progressBar_throtle" />
+
+    <View
+        android:id="@+id/view_dividing_line_9"
+        android:layout_width="@dimen/dividing_const"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/progressBar_eng_load"
+        app:layout_constraintEnd_toEndOf="@id/progressBar_throtle"
+        app:layout_constraintStart_toEndOf="@id/view_dividing_line_8"
+        app:layout_constraintTop_toTopOf="@id/progressBar_throtle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,19 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/blackOverlay85"
     android:layout_height="match_parent"
+    android:background="@color/blackOverlay80"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/tv_live_dashboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:textSize="@dimen/dp_24"
-        android:textColor="@color/white"
-        android:textStyle="bold"
+        android:layout_marginTop="@dimen/dp_32"
         android:text="@string/live_dashboard"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_22"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,12 +25,103 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
         android:text="@string/close"
         android:textColor="@color/white"
-        android:textSize="@dimen/dp_24"
+        android:textSize="@dimen/sp_20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/tv_live_dashboard" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_32"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_live_dashboard">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_live_dashboard">
+
+            <com.example.myfirstapp.TachometerView
+                android:id="@+id/tachometer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.example.myfirstapp.PerformanceView
+                android:id="@+id/performance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_32"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tachometer" />
+
+            <com.example.myfirstapp.DataView
+                android:id="@+id/data_int_man_p"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_32"
+                app:layout_constraintEnd_toStartOf="@id/data_air_flow_rate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/performance" />
+
+            <com.example.myfirstapp.DataView
+                android:id="@+id/data_air_flow_rate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16"
+                app:layout_constraintBottom_toBottomOf="@id/data_int_man_p"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/data_int_man_p"
+                app:layout_constraintTop_toTopOf="@id/data_int_man_p" />
+
+            <com.example.myfirstapp.DataView
+                android:id="@+id/data_temperature"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                app:layout_constraintEnd_toStartOf="@id/data_bar_pressure"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/data_int_man_p" />
+
+            <com.example.myfirstapp.DataView
+                android:id="@+id/data_bar_pressure"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16"
+                app:layout_constraintBottom_toBottomOf="@id/data_temperature"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/data_temperature"
+                app:layout_constraintTop_toTopOf="@id/data_temperature" />
+
+            <com.example.myfirstapp.VinView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_32"
+                android:layout_marginBottom="@dimen/dp_64"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/data_temperature" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

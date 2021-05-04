@@ -8,4 +8,11 @@
     <string name="performance">PERFORMANCE</string>
     <string name="air_flow_rate">AIR FLOW RATE</string>
     <string name="psi">psi</string>
+    <string name="gr_s">gr/s</string>
+    <string name="bar">bar</string>
+    <string name="vin">VIN</string>
+    <string name="count_vin">JH2PC35051M20020</string>
+    <string name="count_data">%1$s</string>
+    <string name="throtle">Throtle</string>
+    <string name="eng_load">Eng.Load</string>
 </resources>

@@ -7,4 +7,5 @@
     <corners
         android:topLeftRadius="@dimen/dp_8"
         android:topRightRadius="@dimen/dp_8" />
+
 </shape>
