@@ -18,4 +18,5 @@
     <string name="speed">SPEED</string>
     <string name="km_h">km/h</string>
     <string name="gear">GEAR</string>
+    <string name="x1_000_rpm">x1.000 rpm</string>
 </resources>

@@ -19,7 +19,7 @@ class DataView @JvmOverloads constructor(
       binding.tvHeadingData.text = heading
     }
 
-    fun setCountLongData(count: Long) {
+    fun setCountLongData(count: Int) {
       binding.tvCountData.text = count.toString()
     }
 
