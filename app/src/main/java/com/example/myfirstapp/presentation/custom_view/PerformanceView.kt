@@ -1,4 +1,4 @@
-package com.example.myfirstapp
+package com.example.myfirstapp.presentation.custom_view
 
 import android.content.Context
 import android.util.AttributeSet

@@ -1,4 +1,4 @@
-package com.example.myfirstapp.entiy
+package com.example.myfirstapp.domain.entiy
 
 import com.google.gson.annotations.SerializedName
 

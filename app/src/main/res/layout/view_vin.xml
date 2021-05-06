@@ -6,7 +6,7 @@
     android:background="@drawable/background_standard_black">
 
     <TextView
-        android:id="@+id/tv_heading_vin"
+        android:id="@+id/tv_vin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginVertical="@dimen/dp_16"
@@ -19,16 +19,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_vin_count"
+        android:id="@+id/tv_value_vin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/count_vin"
         android:fontFamily="@font/rubik_regular"
         android:textColor="@color/white"
         android:textSize="@dimen/sp_20"
-        app:layout_constraintBottom_toBottomOf="@id/tv_heading_vin"
+        app:layout_constraintBottom_toBottomOf="@id/tv_vin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_heading_vin" />
+        app:layout_constraintTop_toTopOf="@id/tv_vin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

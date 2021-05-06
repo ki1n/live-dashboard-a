@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blackOverlay80"
-    tools:context=".MainActivity">
+    tools:context=".presentation.main.MainActivity">
 
     <TextView
         android:id="@+id/tv_live_dashboard"
@@ -48,7 +48,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_live_dashboard">
 
-            <com.example.myfirstapp.TachometerView
+            <com.example.myfirstapp.presentation.custom_view.TachometerView
                 android:id="@+id/tachometer"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <com.example.myfirstapp.PerformanceView
+            <com.example.myfirstapp.presentation.custom_view.PerformanceView
                 android:id="@+id/performance"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tachometer" />
 
-            <com.example.myfirstapp.DataView
+            <com.example.myfirstapp.presentation.custom_view.DataView
                 android:id="@+id/data_int_man_p"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -77,7 +77,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/performance" />
 
-            <com.example.myfirstapp.DataView
+            <com.example.myfirstapp.presentation.custom_view.DataView
                 android:id="@+id/data_air_flow_rate"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -88,7 +88,7 @@
                 app:layout_constraintStart_toEndOf="@id/data_int_man_p"
                 app:layout_constraintTop_toTopOf="@id/data_int_man_p" />
 
-            <com.example.myfirstapp.DataView
+            <com.example.myfirstapp.presentation.custom_view.DataView
                 android:id="@+id/data_temperature"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -98,7 +98,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/data_int_man_p" />
 
-            <com.example.myfirstapp.DataView
+            <com.example.myfirstapp.presentation.custom_view.DataView
                 android:id="@+id/data_bar_pressure"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -109,7 +109,7 @@
                 app:layout_constraintStart_toEndOf="@id/data_temperature"
                 app:layout_constraintTop_toTopOf="@id/data_temperature" />
 
-            <com.example.myfirstapp.VinView
+            <com.example.myfirstapp.presentation.custom_view.VinView
                 android:id="@+id/vin"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

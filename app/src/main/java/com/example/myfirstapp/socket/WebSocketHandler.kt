@@ -55,7 +55,7 @@ class WebSocketHandler {
     }
   }
 
-  private fun  startWebSocket(context: Context, url: String) {
+  private fun startWebSocket(context: Context, url: String) {
     if (onSuccess != null && onError != null) {
       val reqBuilder = NetworkRequest.Builder()
       reqBuilder.addTransportType(NetworkCapabilities.TRANSPORT_WIFI);

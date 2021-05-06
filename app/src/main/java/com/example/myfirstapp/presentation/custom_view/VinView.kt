@@ -1,4 +1,4 @@
-package com.example.myfirstapp
+package com.example.myfirstapp.presentation.custom_view
 
 import android.content.Context
 import android.util.AttributeSet
@@ -13,7 +13,7 @@ class VinView @JvmOverloads constructor(
 
     private val binding = ViewVinBinding.inflate(LayoutInflater.from(context), this, true)
 
-    fun setVinData(vin: String) {
-        binding.tvVinCount.text = vin
+    fun setValue(vin: String) {
+        binding.tvValueVin.text = vin
     }
 }

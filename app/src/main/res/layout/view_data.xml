@@ -6,7 +6,7 @@
     android:background="@drawable/background_standard_black">
 
     <TextView
-        android:id="@+id/tv_heading_data"
+        android:id="@+id/tv_header_data"
         style="@style/defaultTextStyle"
         android:text="@string/performance"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,14 +20,14 @@
         android:background="@drawable/background_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_heading_data" />
+        app:layout_constraintTop_toBottomOf="@id/tv_header_data" />
 
     <TextView
-        android:id="@+id/tv_count_data"
+        android:id="@+id/tv_value"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_16"
         android:layout_marginVertical="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_16"
         android:fontFamily="@font/rubik_bold"
         android:text="5"
         android:textColor="@color/white"
@@ -37,15 +37,15 @@
         app:layout_constraintTop_toBottomOf="@id/view_data" />
 
     <TextView
-        android:id="@+id/tv_text_data"
+        android:id="@+id/tv_value_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_8"
         android:text="@string/psi"
-        app:layout_constraintBaseline_toBaselineOf="@id/tv_count_data"
         android:textColor="@color/white"
         android:textSize="@dimen/sp_18"
-        app:layout_constraintBottom_toBottomOf="@id/tv_count_data"
-        app:layout_constraintStart_toEndOf="@id/tv_count_data" />
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_value"
+        app:layout_constraintBottom_toBottomOf="@id/tv_value"
+        app:layout_constraintStart_toEndOf="@id/tv_value" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

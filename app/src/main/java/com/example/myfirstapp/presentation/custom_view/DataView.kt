@@ -1,9 +1,10 @@
-package com.example.myfirstapp
+package com.example.myfirstapp.presentation.custom_view
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
+import com.example.myfirstapp.R
 import com.example.myfirstapp.databinding.ViewDataBinding
 import java.util.*
 
@@ -15,20 +16,20 @@ class DataView @JvmOverloads constructor(
 
     private var binding: ViewDataBinding = ViewDataBinding.inflate(LayoutInflater.from(context), this, true)
 
-    fun setHeadingData(heading: String) {
-      binding.tvHeadingData.text = heading
+    fun setHeader(header: String) {
+        binding.tvHeaderData.text = header
     }
 
-    fun setCountLongData(count: Int) {
-      binding.tvCountData.text = count.toString()
+    fun setValue(value: Int) {
+        binding.tvValue.text = value.toString()
     }
 
-    fun setCountDoubleData(count: Double) {
-       binding.tvCountData.text =
-                resources.getString(R.string.count_data, String.format(Locale.US, "%,.2f", count))
+    fun setValue(value: Double) {
+        binding.tvValue.text =
+                resources.getString(R.string.count_data, String.format(Locale.US, "%,.2f", value))
     }
 
-    fun setTextData(text: String) {
-       binding.tvTextData.text = text
+    fun setValueType(type: String) {
+        binding.tvValueType.text = type
     }
 }

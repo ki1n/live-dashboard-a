@@ -6,7 +6,7 @@
     android:background="@drawable/background_standard_black">
 
     <TextView
-        android:id="@+id/tv_performance"
+        android:id="@+id/tv_header_performance"
         style="@style/defaultTextStyle"
         android:text="@string/performance"
         app:layout_constraintEnd_toEndOf="parent"
@@ -14,13 +14,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/view_tachometer"
         android:layout_width="0dp"
         android:layout_height="@dimen/dp_4"
         android:background="@drawable/background_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_performance" />
+        app:layout_constraintTop_toBottomOf="@id/tv_header_performance" />
 
     <TextView
         android:id="@+id/tv_throtle"
@@ -35,7 +35,7 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/guideline25"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
+        app:layout_constraintTop_toBottomOf="@+id/view_tachometer" />
 
     <ProgressBar
         android:id="@+id/progressBar_throtle"
