@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.widget.FrameLayout
 import com.example.myfirstapp.R
 import com.example.myfirstapp.databinding.ViewDataBinding
+import com.example.myfirstapp.util.Constants
 import java.util.*
 
 class DataView @JvmOverloads constructor(
@@ -20,13 +21,21 @@ class DataView @JvmOverloads constructor(
         binding.tvHeaderData.text = header
     }
 
-    fun setValue(value: Int) {
-        binding.tvValue.text = value.toString()
+    fun setValue(value: Int?) {
+        if (value == null){
+            binding.tvValue.text = Constants.NULL_DATA
+        } else {
+            binding.tvValue.text = value.toString()
+        }
     }
 
-    fun setValue(value: Double) {
-        binding.tvValue.text =
-                resources.getString(R.string.count_data, String.format(Locale.US, "%,.2f", value))
+    fun setValue(value: Double?) {
+        if (value == null) {
+            binding.tvValue.text = Constants.NULL_DATA
+        } else {
+            binding.tvValue.text =
+                    resources.getString(R.string.count_data, String.format(Locale.US, "%,.2f", value))
+        }
     }
 
     fun setValueType(type: String) {

@@ -1,6 +1,7 @@
 package com.example.myfirstapp.presentation.main
 
-import com.example.myfirstapp.R
+import android.util.Log
+import com.example.myfirstapp.databinding.ActivityMainBinding
 import com.example.myfirstapp.domain.entiy.DashBoard
 import com.example.myfirstapp.presentation.base.BaseActivity
 import com.example.myfirstapp.util.Constants
@@ -8,41 +9,44 @@ import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : BaseActivity() {
-
-    override var layoutId: Int = R.layout.activity_main
+    override val binding: ActivityMainBinding by lazy {
+        ActivityMainBinding.inflate(layoutInflater)
+    }
 
     override val viewModel by viewModel<MainViewModel>()
 
     override fun iniView() {
+
         viewModel.socketLiveData.observe(this@MainActivity) {
+            Log.d("tag", it.toString())
             updateUI(it)
         }
     }
 
     private fun updateUI(dashBoard: DashBoard) {
-        performance.setDataProgressPerformance(dashBoard.throttle)
-        performance.setDataProgressEngLoad(dashBoard.engineLoad)
+        binding.performance.setDataProgressPerformance(dashBoard.throttle)
+        binding.performance.setDataProgressEngLoad(dashBoard.engineLoad)
 
-        tachometer.setValueSpeed(dashBoard.speed)
-        tachometer.setValueGear(dashBoard.gear)
-        tachometer.setRmpTachometer(dashBoard.gear)
+        binding.tachometer.setValueSpeed(dashBoard.speed)
+        binding.tachometer.setValueGear(dashBoard.gear)
+        binding.tachometer.setRmpTachometer(dashBoard.rpm)
 
-        vin.setValue(dashBoard.vin)
+        binding.vin.setValue(dashBoard.vin)
 
-        data_int_man_p.setHeader(Constants.INT_MAN_P)
-        data_int_man_p.setValue(dashBoard.intManP)
-        data_int_man_p.setValueType(Constants.PSI)
+        binding.dataIntManP.setHeader(Constants.INT_MAN_P)
+        binding.dataIntManP.setValue(dashBoard.intManP)
+        binding.dataIntManP.setValueType(Constants.PSI)
 
-        data_air_flow_rate.setHeader(Constants.AIR_FLOW_RATE)
-        data_air_flow_rate.setValue(dashBoard.airFlowRate)
-        data_air_flow_rate.setValueType(Constants.GR_S)
+        binding.dataAirFlowRate.setHeader(Constants.AIR_FLOW_RATE)
+        binding.dataAirFlowRate.setValue(dashBoard.airFlowRate)
+        binding.dataAirFlowRate.setValueType(Constants.GR_S)
 
-        data_temperature.setHeader(Constants.TEMPERATURE)
-        data_temperature.setValue(dashBoard.temperature)
-        data_temperature.setValueType(Constants.DEGREE_CELSIUS)
+        binding.dataTemperature.setHeader(Constants.TEMPERATURE)
+        binding.dataTemperature.setValue(dashBoard.temperature)
+        binding.dataTemperature.setValueType(Constants.DEGREE_CELSIUS)
 
-        data_bar_pressure.setHeader(Constants.BAR_PRESSURE)
-        data_bar_pressure.setValue(dashBoard.pressure)
-        data_bar_pressure.setValueType(Constants.BAR)
+        binding.dataBarPressure.setHeader(Constants.BAR_PRESSURE)
+        binding.dataBarPressure.setValue(dashBoard.pressure)
+        binding.dataBarPressure.setValueType(Constants.BAR)
     }
 }

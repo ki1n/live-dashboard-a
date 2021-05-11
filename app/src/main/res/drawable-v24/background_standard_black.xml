@@ -6,4 +6,5 @@
 
     <corners
         android:radius="@dimen/dp_8" />
+
 </shape>

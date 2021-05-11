@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/background_standard_black">
 
     <TextView
@@ -29,7 +30,7 @@
         android:layout_marginVertical="@dimen/dp_16"
         android:layout_marginStart="@dimen/dp_16"
         android:fontFamily="@font/rubik_bold"
-        android:text="5"
+        tools:text="152"
         android:textColor="@color/white"
         android:textSize="@dimen/sp_32"
         app:layout_constraintBottom_toBottomOf="parent"

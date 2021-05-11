@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.FrameLayout
 import com.example.myfirstapp.databinding.ViewTachometerBinding
+import com.example.myfirstapp.exstension.rmpFloor
+import com.example.myfirstapp.util.Constants
 
 class TachometerView @JvmOverloads constructor(
         context: Context,
@@ -35,26 +37,39 @@ class TachometerView @JvmOverloads constructor(
 
     private var lastRmp: Int = NO_LAST_RMP
 
-    fun setValueSpeed(speed: Int) {
-        binding.tvValueSpeed.text = speed.toString()
+    fun setValueSpeed(speed: Int?) {
+        if (speed == null) {
+            binding.tvValueSpeed.text = Constants.NULL_DATA
+        } else {
+            binding.tvValueSpeed.text = speed.toString()
+        }
     }
 
-    fun setValueGear(gear: Int) {
-        binding.tvValueGear.text = gear.toString()
+    fun setValueGear(gear: Int?) {
+        if (gear == null) {
+            binding.tvValueGear.text = Constants.NULL_DATA
+        } else {
+            binding.tvValueGear.text = gear.toString()
+        }
     }
 
-    fun setRmpTachometer(rmp: Int) {
-        if (rmp != lastRmp) {
-            tachometerItems.take(rmp)
-                    .forEach {
-                        it.visibility = View.VISIBLE
-                    }
-
-            tachometerItems.drop(rmp)
-                    .forEach {
-                        it.visibility = View.INVISIBLE
-                    }
-            lastRmp = rmp
+    fun setRmpTachometer(rmp: Int?) {
+        if (rmp != null) {
+            if (rmp.rmpFloor() != lastRmp) {
+                tachometerItems.take(rmp.rmpFloor())
+                        .forEach {
+                            it.visibility = View.VISIBLE
+                        }
+                tachometerItems.drop(rmp.rmpFloor())
+                        .forEach {
+                            it.visibility = View.INVISIBLE
+                        }
+                lastRmp = rmp.rmpFloor()
+            }
+        } else {
+            tachometerItems.forEach {
+                it.visibility = INVISIBLE
+            }
         }
     }
 }

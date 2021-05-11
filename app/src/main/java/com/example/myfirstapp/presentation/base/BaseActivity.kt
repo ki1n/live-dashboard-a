@@ -6,10 +6,11 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
+import androidx.viewbinding.ViewBinding
 import com.example.myfirstapp.R
 
 abstract class BaseActivity : AppCompatActivity() {
-    protected abstract var layoutId: Int
+    protected abstract val binding: ViewBinding
 
     protected abstract fun iniView()
 
@@ -18,14 +19,13 @@ abstract class BaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(layoutId)
+        setContentView(binding.root)
         progressDialog()
         bindViewModel()
         iniView()
     }
 
     private fun bindViewModel() {
-
         viewModel?.isInProgress?.observe(this, { isInProgress ->
             if (isInProgress) {
                 progressDialog.show()
@@ -41,7 +41,7 @@ abstract class BaseActivity : AppCompatActivity() {
         progressDialog.setContentView(inflate)
         progressDialog.setCancelable(false)
         progressDialog.window?.setBackgroundDrawable(
-            ColorDrawable(Color.TRANSPARENT)
+                ColorDrawable(Color.TRANSPARENT)
         )
     }
 }

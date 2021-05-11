@@ -11,6 +11,8 @@ object Constants {
     const val BAR = "bar"
     const val DEGREE_CELSIUS = "ºC"
 
+    const val NULL_DATA = "-"
+
     const val url = "ws://192.168.88.213"
     const val port = ":9081"
 }

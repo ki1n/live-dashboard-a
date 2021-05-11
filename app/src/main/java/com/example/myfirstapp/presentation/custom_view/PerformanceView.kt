@@ -13,11 +13,15 @@ class PerformanceView @JvmOverloads constructor(
 
     private val binding = ViewPerformanceBinding.inflate(LayoutInflater.from(context), this, true)
 
-    fun setDataProgressPerformance(progress: Int) {
-        binding.progressBarThrotle.progress = progress
+    fun setDataProgressPerformance(progress: Int?) {
+        if (progress != null) {
+            binding.progressBarThrotle.progress = progress
+        }
     }
 
-    fun setDataProgressEngLoad(progress: Int) {
-        binding.progressBarEngLoad.progress = progress
+    fun setDataProgressEngLoad(progress: Int?) {
+        if (progress != null) {
+            binding.progressBarEngLoad.progress = progress
+        }
     }
 }

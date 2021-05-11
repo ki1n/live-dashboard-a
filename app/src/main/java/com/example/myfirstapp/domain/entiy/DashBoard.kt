@@ -4,23 +4,23 @@ import com.google.gson.annotations.SerializedName
 
 data class DashBoard(
         @SerializedName("rpm")
-        val rpm: Int,
+        val rpm: Int?,
         @SerializedName("speed")
-        val speed: Int,
+        val speed: Int?,
         @SerializedName("gear")
-        val gear: Int,
+        val gear: Int?,
         @SerializedName("throttle")
-        val throttle: Int,
+        val throttle: Int?,
         @SerializedName("engineLoad")
-        val engineLoad: Int,
+        val engineLoad: Int?,
         @SerializedName("intManP")
-        val intManP: Int,
+        val intManP: Int?,
         @SerializedName("airFlowRate")
-        val airFlowRate: Int,
+        val airFlowRate: Int?,
         @SerializedName("temperature")
-        val temperature: Int,
+        val temperature: Int?,
         @SerializedName("pressure")
-        val pressure: Double,
+        val pressure: Double?,
         @SerializedName("vin")
-        val vin: String
+        val vin: String?
 )

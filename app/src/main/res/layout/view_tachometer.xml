@@ -25,7 +25,7 @@
 
     <TextView
         android:id="@+id/tv_speed"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
@@ -37,25 +37,25 @@
 
     <TextView
         android:id="@+id/tv_value_speed"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/rubik_bold"
-        android:text="178"
         android:textColor="@color/white"
         android:textSize="@dimen/sp_48"
         app:layout_constraintStart_toStartOf="@id/tv_speed"
-        app:layout_constraintTop_toBottomOf="@id/tv_speed" />
+        app:layout_constraintTop_toBottomOf="@id/tv_speed"
+        tools:text="178" />
 
     <TextView
         android:id="@+id/tv_km"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="@string/km_h"
         android:textColor="@color/white"
         android:textSize="@dimen/sp_28"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tv_value_speed"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_value_speed"
         app:layout_constraintStart_toEndOf="@id/tv_value_speed" />
 
     <TextView
@@ -65,12 +65,12 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/background_gear"
         android:gravity="center"
-        android:text="4"
         android:textColor="@color/darkGrey"
         android:textSize="@dimen/sp_28"
         app:layout_constraintBottom_toBottomOf="@id/tv_value_speed"
-        app:layout_constraintEnd_toEndOf="@+id/tv_tachometer_item_10"
-        app:layout_constraintTop_toBottomOf="@+id/tv_gear" />
+        app:layout_constraintEnd_toEndOf="@id/tv_tachometer_item_10"
+        app:layout_constraintTop_toBottomOf="@+id/tv_gear"
+        tools:text="4" />
 
     <TextView
         android:id="@+id/tv_gear"
@@ -80,13 +80,13 @@
         android:textColor="@color/black_tachometer"
         android:textSize="@dimen/sp_18"
         app:layout_constraintBottom_toBottomOf="@+id/tv_speed"
-        app:layout_constraintEnd_toEndOf="@+id/tv_tachometer_item_10"
+        app:layout_constraintEnd_toEndOf="@id/tv_tachometer_item_10"
         app:layout_constraintStart_toStartOf="@id/tv_value_gear"
         app:layout_constraintTop_toTopOf="@id/tv_speed" />
 
     <TextView
         android:id="@+id/tv_rpm"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_16"
         android:layout_marginBottom="@dimen/dp_24"
@@ -101,7 +101,7 @@
         android:layout_width="32dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
-        android:background="@color/white"
+        android:background="@drawable/ic_tachometer_1"
         app:layout_constraintBottom_toBottomOf="@+id/tv_rpm"
         app:layout_constraintEnd_toEndOf="@+id/tv_tachometer_item_2"
         app:layout_constraintStart_toStartOf="@+id/tv_tachometer_item_2"

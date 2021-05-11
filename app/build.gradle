@@ -54,9 +54,4 @@ dependencies {
     implementation "org.koin:koin-androidx-viewmodel:2.2.2"
     implementation "org.koin:koin-androidx-ext:2.0.1"
 
-    //Rx
-    implementation 'io.reactivex.rxjava2:rxjava:2.2.2'
-    implementation 'io.reactivex.rxjava2:rxkotlin:2.3.0'
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
-    implementation 'com.jakewharton.rxrelay2:rxrelay:2.1.1'
 }

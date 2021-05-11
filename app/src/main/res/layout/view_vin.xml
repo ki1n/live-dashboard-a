@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/background_standard_black">
 
     <TextView
@@ -22,7 +23,7 @@
         android:id="@+id/tv_value_vin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/count_vin"
+        tools:text="@string/count_vin"
         android:fontFamily="@font/rubik_regular"
         android:textColor="@color/white"
         android:textSize="@dimen/sp_20"
