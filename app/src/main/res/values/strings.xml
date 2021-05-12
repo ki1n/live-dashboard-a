@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My First App</string>
+    <string name="app_name">RideLink Dashboard</string>
 
     <string name="close">Close</string>
     <string name="live_dashboard">Live Dashboard</string>
