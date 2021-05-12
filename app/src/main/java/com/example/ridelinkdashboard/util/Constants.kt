@@ -2,14 +2,15 @@ package com.example.ridelinkdashboard.util
 
 object Constants {
 
-    const val INT_MAN_P = "INT-MAN.P."
-    const val TEMPERATURE = "TEMPERATURE"
-    const val AIR_FLOW_RATE = "AIR FLOW RATE"
+    const val TEMP_COOLANT = "TEMP.COOLANT"
+    const val GYRO = "GYRO"
+    const val TEMP_ENGINE_OIL = "TEMP.OIL"
     const val BAR_PRESSURE = "BAR_PRESSURE"
     const val PSI = "psi"
     const val GR_S = "gr/s"
     const val BAR = "bar"
     const val DEGREE_CELSIUS = "ºC"
+    const val DEGREE = "º"
 
     const val NULL_DATA = "-"
 

@@ -22,8 +22,8 @@ class MainActivity : BaseActivity() {
     }
 
     private fun updateUI(dashBoard: DashBoard) {
-        binding.performance.setDataProgressPerformance(dashBoard.throttle)
-        binding.performance.setDataProgressEngLoad(dashBoard.engineLoad)
+        binding.performance.setDataProgressPerformance(dashBoard.throttle_position)
+        binding.performance.setDataProgressEngLoad(dashBoard.engine_load)
 
       //  binding.tachometer.setValue(dashBoard.tachometer)
 
@@ -33,20 +33,20 @@ class MainActivity : BaseActivity() {
 
         binding.vin.setValue(dashBoard.vin)
 
-        binding.dataIntManP.setHeader(Constants.INT_MAN_P)
-        binding.dataIntManP.setValue(dashBoard.intManP)
-        binding.dataIntManP.setValueType(Constants.PSI)
+        binding.dataIntManP.setHeader(Constants.TEMP_COOLANT)
+        binding.dataIntManP.setValue(dashBoard.temp_coolant_engine)
+        binding.dataIntManP.setValueType(Constants.DEGREE_CELSIUS)
 
-        binding.dataAirFlowRate.setHeader(Constants.AIR_FLOW_RATE)
-        binding.dataAirFlowRate.setValue(dashBoard.airFlowRate)
-        binding.dataAirFlowRate.setValueType(Constants.GR_S)
+        binding.dataAirFlowRate.setHeader(Constants.TEMP_ENGINE_OIL)
+        binding.dataAirFlowRate.setValue(dashBoard.temp_engine_oil)
+        binding.dataAirFlowRate.setValueType(Constants.DEGREE_CELSIUS)
 
-        binding.dataTemperature.setHeader(Constants.TEMPERATURE)
-        binding.dataTemperature.setValue(dashBoard.temperature)
-        binding.dataTemperature.setValueType(Constants.DEGREE_CELSIUS)
+        binding.dataTemperature.setHeader(Constants.GYRO)
+        binding.dataTemperature.setValue(dashBoard.gyro_leaning_angle)
+        binding.dataTemperature.setValueType(Constants.DEGREE)
 
         binding.dataBarPressure.setHeader(Constants.BAR_PRESSURE)
-        binding.dataBarPressure.setValue(dashBoard.pressure)
+        binding.dataBarPressure.setValue(dashBoard.pressure_barometric)
         binding.dataBarPressure.setValueType(Constants.BAR)
     }
 }
