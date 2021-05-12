@@ -60,22 +60,24 @@ class TachometerView @JvmOverloads constructor(
     }
 
     fun setRmpTachometer(rmp: Int?) {
-        if (rmp != null) {
-            if (rmp.rmpFloor() != lastRmp) {
-                tachometerItems.take(rmp.rmpFloor())
-                        .forEach {
-                            it.visibility = View.VISIBLE
-                        }
-                tachometerItems.drop(rmp.rmpFloor())
-                        .forEach {
-                            it.visibility = View.INVISIBLE
-                        }
-                lastRmp = rmp.rmpFloor()
-            }
-        } else {
+        if (rmp == null) {
             tachometerItems.forEach {
                 it.visibility = INVISIBLE
             }
+        }
+        if (rmp!= null && rmp.rmpFloor() != lastRmp) {
+            tachometerItems.take(rmp.rmpFloor())
+                    .forEach {
+                            it.visibility = View.VISIBLE
+                      //  it.setColorFilter(Color.WHITE)
+                    }
+            tachometerItems.drop(rmp.rmpFloor())
+                    .forEach {
+                            it.visibility = View.INVISIBLE
+                    //    it.setColorFilter(Color.DKGRAY)
+
+                    }
+            lastRmp = rmp.rmpFloor()
         }
     }
 }

@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">RideLink Dashboard</string>
 
-    <string name="close">Close</string>
-    <string name="live_dashboard">Live Dashboard</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="socket_status">SOCKET STATUS</string>
     <string name="tachometer">TACHOMETER</string>
     <string name="int_man_p">INT-MAN.P.</string>
     <string name="performance">PERFORMANCE</string>

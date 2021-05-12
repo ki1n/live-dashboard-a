@@ -41,9 +41,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-
             android:layout_marginBottom="32dp"
-            android:src="@drawable/ic_path_1"
+            android:src="@drawable/ic_path_1_active"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -52,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="31.5dp"
-            android:src="@drawable/ic_path_2"
+            android:src="@drawable/ic_path_2_active"
             app:layout_constraintBottom_toBottomOf="@+id/tv_tachometer_item_1"
             app:layout_constraintStart_toStartOf="@+id/tv_tachometer_item_1" />
 
@@ -62,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="1dp"
             android:layout_marginBottom="35.5dp"
-            android:src="@drawable/ic_path_3"
+            android:src="@drawable/ic_path_3_active"
             app:layout_constraintBottom_toBottomOf="@+id/tv_tachometer_item_2"
             app:layout_constraintStart_toStartOf="@+id/tv_tachometer_item_2" />
 
@@ -71,9 +70,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="31.5dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="32dp"
             android:layout_marginBottom="8dp"
-            android:src="@drawable/ic_path_4"
+            android:src="@drawable/ic_path_4_active"
             app:layout_constraintBottom_toTopOf="@+id/tv_tachometer_item_2"
             app:layout_constraintStart_toStartOf="@+id/tv_tachometer_item_3"
             app:layout_constraintTop_toTopOf="parent" />
@@ -83,7 +82,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="41.5dp"
-            android:src="@drawable/ic_path_5"
+            android:src="@drawable/ic_path_5_active"
             app:layout_constraintBottom_toBottomOf="@+id/tv_tachometer_item_4"
             app:layout_constraintStart_toStartOf="@+id/tv_tachometer_item_4"
             app:layout_constraintTop_toTopOf="@+id/tv_tachometer_item_4" />
@@ -93,7 +92,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="34.5dp"
-            android:src="@drawable/ic_path_6"
+            android:src="@drawable/ic_path_6_active"
             app:layout_constraintBottom_toBottomOf="@+id/tv_tachometer_item_5"
             app:layout_constraintStart_toStartOf="@+id/tv_tachometer_item_5"
             app:layout_constraintTop_toTopOf="@+id/tv_tachometer_item_5" />
@@ -103,7 +102,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:src="@drawable/ic_path_7"
+            android:src="@drawable/ic_path_7_active"
             app:layout_constraintBottom_toBottomOf="@+id/tv_tachometer_item_6"
             app:layout_constraintStart_toStartOf="@+id/tv_tachometer_item_6"
             app:layout_constraintTop_toTopOf="@+id/tv_tachometer_item_6" />
@@ -113,7 +112,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
-            android:src="@drawable/ic_path_8"
+            android:src="@drawable/ic_path_8_active"
             app:layout_constraintBottom_toBottomOf="@+id/tv_tachometer_item_7"
             app:layout_constraintStart_toEndOf="@+id/tv_tachometer_item_6"
             app:layout_constraintTop_toTopOf="@+id/tv_tachometer_item_7" />
@@ -123,7 +122,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="27.5dp"
-            android:src="@drawable/ic_path_9"
+            android:src="@drawable/ic_path_9_active"
             app:layout_constraintBottom_toBottomOf="@+id/tv_tachometer_item_8"
             app:layout_constraintStart_toStartOf="@+id/tv_tachometer_item_8"
             app:layout_constraintTop_toTopOf="@+id/tv_tachometer_item_8" />
@@ -134,7 +133,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="37dp"
             android:layout_marginEnd="16dp"
-            android:background="@drawable/ic_path_10"
+            android:background="@drawable/ic_path_10_active"
             app:layout_constraintBottom_toBottomOf="@+id/tv_tachometer_item_9"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/tv_tachometer_item_9"
@@ -173,6 +172,7 @@
             android:text="@string/gear"
             android:textColor="@color/black_tachometer"
             android:textSize="13sp"
+            android:fontFamily="@font/rubik_italic"
             app:layout_constraintBottom_toBottomOf="@+id/tv_speed"
             app:layout_constraintEnd_toEndOf="@+id/tv_tachometer_item_10"
             app:layout_constraintTop_toTopOf="@+id/tv_speed" />
@@ -183,6 +183,7 @@
             android:layout_height="19dp"
             android:layout_marginStart="8dp"
             android:text="@string/km_h"
+            android:fontFamily="@font/rubik_italic"
             android:textColor="@color/white"
             android:textSize="@dimen/sp_18"
             app:layout_constraintBaseline_toBaselineOf="@id/tv_value_speed"
@@ -200,7 +201,7 @@
             android:textSize="@dimen/sp_28"
             app:layout_constraintStart_toStartOf="@+id/tv_speed"
             app:layout_constraintTop_toBottomOf="@+id/tv_speed"
-            tools:text="178" />
+            tools:text="55" />
 
         <TextView
             android:id="@+id/tv_speed"
@@ -210,6 +211,7 @@
             android:text="@string/speed"
             android:textColor="@color/black_tachometer"
             android:textSize="13sp"
+            android:fontFamily="@font/rubik_italic"
             app:layout_constraintStart_toEndOf="@+id/tv_tachometer_item_3"
             app:layout_constraintTop_toBottomOf="@+id/tv_tachometer_item_5" />
 
@@ -244,7 +246,7 @@
             app:srcCompat="@drawable/ic_2" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/imgView_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -254,7 +256,7 @@
             app:srcCompat="@drawable/ic_3" />
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/imgView_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -265,7 +267,7 @@
             app:srcCompat="@drawable/ic_4" />
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/imgView_5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -276,7 +278,7 @@
             app:srcCompat="@drawable/ic_5" />
 
         <ImageView
-            android:id="@+id/imageView7"
+            android:id="@+id/imgView_6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -286,7 +288,7 @@
             app:srcCompat="@drawable/ic_6" />
 
         <ImageView
-            android:id="@+id/imageView8"
+            android:id="@+id/imgView_7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -297,7 +299,7 @@
             app:srcCompat="@drawable/ic_7" />
 
         <ImageView
-            android:id="@+id/imageView9"
+            android:id="@+id/imgView_8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -308,7 +310,7 @@
             app:srcCompat="@drawable/ic_8" />
 
         <ImageView
-            android:id="@+id/imageView10"
+            android:id="@+id/imgView_9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -319,7 +321,7 @@
             app:srcCompat="@drawable/ic_9" />
 
         <ImageView
-            android:id="@+id/imageView11"
+            android:id="@+id/imgView_10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -330,107 +332,5 @@
             app:srcCompat="@drawable/ic_10" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!-- <View
-         android:id="@+id/tv_tachometer_item_1"
-         android:layout_width="27.11dp"
-         android:layout_height="34.39dp"
-         android:layout_marginStart="16dp"
-         android:layout_marginBottom="36dp"
-         android:background="@drawable/ic_path_1"
-         app:layout_constraintBottom_toBottomOf="parent"
-         app:layout_constraintStart_toStartOf="parent" />
-
-     <View
-         android:id="@+id/tv_tachometer_item_2"
-         android:layout_width="19.21dp"
-         android:layout_height="45.17dp"
-         android:layout_marginBottom="30.11dp"
-         android:background="@drawable/ic_path_2"
-         app:layout_constraintBottom_toBottomOf="@+id/tv_tachometer_item_1"
-         app:layout_constraintStart_toStartOf="@+id/tv_tachometer_item_1" />
-
-     <View
-         android:id="@+id/tv_tachometer_item_3"
-         android:layout_width="47.85dp"
-         android:layout_height="36.26dp"
-         android:layout_marginBottom="34dp"
-         android:layout_marginStart="2dp"
-         android:rotation="1"
-         android:background="@drawable/ic_path_3"
-         app:layout_constraintBottom_toBottomOf="@+id/tv_tachometer_item_2"
-         app:layout_constraintStart_toStartOf="@+id/tv_tachometer_item_2" />
-
-     <View
-         android:id="@+id/tv_tachometer_item_4"
-         android:layout_width="53.1dp"
-         android:layout_height="24.18dp"
-         android:layout_marginStart="31.85dp"
-         android:layout_marginTop="16dp"
-         android:layout_marginBottom="7.26dp"
-         android:background="@drawable/ic_path_4"
-         app:layout_constraintBottom_toTopOf="@+id/tv_tachometer_item_2"
-         app:layout_constraintStart_toStartOf="@+id/tv_tachometer_item_3"
-         app:layout_constraintTop_toBottomOf="@+id/view_tachometer" />
-
-     <View
-         android:id="@+id/tv_tachometer_item_5"
-         android:layout_width="38.39dp"
-         android:layout_height="24.18dp"
-         android:layout_marginStart="41dp"
-         android:background="@drawable/ic_path_5"
-         app:layout_constraintBottom_toBottomOf="@+id/tv_tachometer_item_4"
-         app:layout_constraintStart_toStartOf="@+id/tv_tachometer_item_4"
-         app:layout_constraintTop_toTopOf="@+id/tv_tachometer_item_4" />
-
-     <View
-         android:id="@+id/tv_tachometer_item_6"
-         android:layout_width="38.39dp"
-         android:layout_height="24.18dp"
-         android:layout_marginStart="32dp"
-         android:background="@drawable/ic_path_6"
-         app:layout_constraintBottom_toBottomOf="@+id/tv_tachometer_item_5"
-         app:layout_constraintStart_toStartOf="@+id/tv_tachometer_item_5"
-         app:layout_constraintTop_toTopOf="@+id/tv_tachometer_item_5" />
-
-     <View
-         android:id="@+id/tv_tachometer_item_7"
-         android:layout_width="27.19dp"
-         android:layout_height="24.18dp"
-         android:layout_marginStart="39dp"
-         android:background="@drawable/ic_path_7"
-         app:layout_constraintBottom_toBottomOf="@+id/tv_tachometer_item_6"
-         app:layout_constraintStart_toStartOf="@+id/tv_tachometer_item_6"
-         app:layout_constraintTop_toTopOf="@+id/tv_tachometer_item_6" />
-
-     <View
-         android:id="@+id/tv_tachometer_item_8"
-         android:layout_width="38.98dp"
-         android:layout_height="24.18dp"
-         android:layout_marginStart="22dp"
-         android:background="@drawable/ic_path_8"
-         app:layout_constraintBottom_toBottomOf="@+id/tv_tachometer_item_7"
-         app:layout_constraintStart_toEndOf="@+id/tv_tachometer_item_6"
-         app:layout_constraintTop_toTopOf="@+id/tv_tachometer_item_7" />
-
-     <View
-         android:id="@+id/tv_tachometer_item_9"
-         android:layout_width="58.3dp"
-         android:layout_height="24.18dp"
-         android:layout_marginStart="26dp"
-         android:background="@drawable/ic_path_9"
-         app:layout_constraintBottom_toBottomOf="@+id/tv_tachometer_item_8"
-         app:layout_constraintStart_toStartOf="@+id/tv_tachometer_item_8"
-         app:layout_constraintTop_toTopOf="@+id/tv_tachometer_item_8" />
-
-     <View
-         android:id="@+id/tv_tachometer_item_10"
-         android:layout_width="49.16dp"
-         android:layout_height="24.18dp"
-         android:layout_marginStart="35dp"
-         android:background="@drawable/ic_path_10"
-         app:layout_constraintBottom_toBottomOf="@+id/tv_tachometer_item_9"
-         app:layout_constraintStart_toStartOf="@+id/tv_tachometer_item_9"
-         app:layout_constraintTop_toTopOf="@+id/tv_tachometer_item_9" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

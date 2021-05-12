@@ -34,7 +34,7 @@ class DataView @JvmOverloads constructor(
             binding.tvValue.text = Constants.NULL_DATA
         } else {
             binding.tvValue.text =
-                    resources.getString(R.string.count_data, String.format(Locale.US, "%,.2f", value))
+                    resources.getString(R.string.count_data, String.format(Locale.US, "%,.1f", value))
         }
     }
 

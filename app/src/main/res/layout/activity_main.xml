@@ -8,37 +8,38 @@
     tools:context="com.example.ridelinkdashboard.presentation.main.MainActivity">
 
     <TextView
-        android:id="@+id/tv_live_dashboard"
+        android:id="@+id/tv_socket_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="@dimen/dp_32"
-        android:text="@string/live_dashboard"
+        android:text="@string/socket_status"
         android:textColor="@color/white"
-        android:textSize="@dimen/sp_22"
+        android:textSize="@dimen/sp_18"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_close"
+        android:id="@+id/tv_disconnected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:text="@string/close"
+        android:text="@string/disconnected"
         android:textColor="@color/white"
-        android:textSize="@dimen/sp_20"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_live_dashboard" />
+        app:layout_constraintTop_toTopOf="@id/tv_socket_status" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/dp_32"
+        android:layout_marginTop="@dimen/dp_16"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_live_dashboard">
+        app:layout_constraintTop_toBottomOf="@id/tv_socket_status">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -46,7 +47,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_live_dashboard">
+            app:layout_constraintTop_toBottomOf="@id/tv_socket_status">
 
             <com.example.ridelinkdashboard.presentation.custom_view.TachometerView
                 android:id="@+id/tachometer"
@@ -124,5 +125,15 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_socket_status_boolean"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/background_socket_status_true"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_socket_status"
+        app:layout_constraintStart_toEndOf="@+id/tv_socket_status"
+        app:layout_constraintTop_toTopOf="@+id/tv_socket_status" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

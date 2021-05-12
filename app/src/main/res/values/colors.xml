@@ -17,4 +17,5 @@
     <color name="black_tachometer">#656565</color>
     <color name="yellow_tachometer">#ecee36</color>
     <color name="rlRed">@color/colorPrimary</color>
+    <color name="socket_status_true">#11D119</color>
 </resources>
