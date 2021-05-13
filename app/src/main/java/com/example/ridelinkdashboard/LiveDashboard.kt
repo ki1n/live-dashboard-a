@@ -1,6 +1,7 @@
 package com.example.ridelinkdashboard
 
 import android.app.Application
+import com.example.ridelinkdashboard.di.dataModule
 import com.example.ridelinkdashboard.di.repositoryModule
 import com.example.ridelinkdashboard.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
@@ -16,6 +17,7 @@ class LiveDashboard : Application() {
         startKoin {
             this.modules(
                     listOf(
+                            dataModule,
                             repositoryModule,
                             viewModelModule,
                     )

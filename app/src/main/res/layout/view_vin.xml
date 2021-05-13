@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/background_standard_black">
+    android:background="@drawable/background_vin">
 
     <TextView
         android:id="@+id/tv_vin"
@@ -12,8 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_marginVertical="@dimen/dp_16"
         android:layout_marginStart="@dimen/dp_16"
+        android:fontFamily="@font/roboto_regular"
         android:text="@string/vin"
-        android:textColor="@color/white"
+        android:textColor="@color/gray_balls"
         android:textSize="@dimen/sp_18"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="@string/count_vin"
-        android:fontFamily="@font/rubik_regular"
+        android:fontFamily="@font/roboto_regular"
         android:textColor="@color/white"
         android:textSize="@dimen/sp_20"
         app:layout_constraintBottom_toBottomOf="@id/tv_vin"

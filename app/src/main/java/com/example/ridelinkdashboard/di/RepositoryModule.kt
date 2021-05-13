@@ -6,5 +6,5 @@ import org.koin.dsl.module
 
 val repositoryModule = module {
 
-    single<SocketRepository> { SocketRepositoryImpl() }
+    single<SocketRepository> { SocketRepositoryImpl(get(), get()) }
 }

@@ -31,7 +31,7 @@ class TachometerView @JvmOverloads constructor(
                 binding.tvTachometerItem7,
                 binding.tvTachometerItem8,
                 binding.tvTachometerItem9,
-                binding.tvTachometerItem10,
+                binding.tvTachometerItem10
         )
     }
 
@@ -44,12 +44,6 @@ class TachometerView @JvmOverloads constructor(
             binding.tvValueSpeed.text = speed.toString()
         }
     }
-
-//    fun setValue(dashBoard: DashBoard.Tachometer) {
-//        setValueSpeed(dashBoard.speed)
-//        setValueGear(dashBoard.gear)
-//        setRmpTachometer(dashBoard.rpm)
-//    }
 
     fun setValueGear(gear: Int?) {
         if (gear == null) {
@@ -65,17 +59,14 @@ class TachometerView @JvmOverloads constructor(
                 it.visibility = INVISIBLE
             }
         }
-        if (rmp!= null && rmp.rmpFloor() != lastRmp) {
+        if (rmp != null && rmp.rmpFloor() != lastRmp) {
             tachometerItems.take(rmp.rmpFloor())
                     .forEach {
-                            it.visibility = View.VISIBLE
-                      //  it.setColorFilter(Color.WHITE)
+                        it.visibility = View.VISIBLE
                     }
             tachometerItems.drop(rmp.rmpFloor())
                     .forEach {
-                            it.visibility = View.INVISIBLE
-                    //    it.setColorFilter(Color.DKGRAY)
-
+                        it.visibility = View.INVISIBLE
                     }
             lastRmp = rmp.rmpFloor()
         }
